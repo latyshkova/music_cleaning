@@ -4,3 +4,4 @@
 .ipynb_checkpoints
 .ropeproject
 test_data/results/*.wav
+/junk

@@ -5,3 +5,5 @@
 .ropeproject
 test_data/results/*.wav
 /junk
+mini_dataset
+test_data

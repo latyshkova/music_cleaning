@@ -31,10 +31,8 @@
   "containerEnv": {
       "DISPLAY": "dummy",
       "PYTHONUNBUFFERED": "True",
-      "UV_LINK_MODE": "copy",
-      "UV_PROJECT_ENVIRONMENT": "/home/vscode/.venv"
+      "UV_LINK_MODE": "copy"
   },
   "postCreateCommand": "uv sync --frozen",
-  "postStartCommand": "uv run pre-commit install",
   "remoteUser": "vscode"
 }

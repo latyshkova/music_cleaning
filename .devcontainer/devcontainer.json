@@ -1,0 +1,32 @@
+{
+  "name": "uv",
+  "build": {
+      "context": "..",
+      "dockerfile": "Dockerfile",
+      "args": {
+          "UV_VERSION": "0.6.2",
+          "DEBIAN_VERSION": "bookworm"
+      }
+  },
+  "features": {
+      "ghcr.io/dhoeric/features/hadolint:1": {}
+  },
+  "customizations": {
+      "vscode": {
+          "extensions": [
+              "ms-azuretools.vscode-docker",
+              "ms-python.python",
+              "ms-toolsai.jupyter",
+              "redhat.vscode-yaml",
+              "tamasfe.even-better-toml"
+          ]
+      }
+  },
+  "containerEnv": {
+      "DISPLAY": "dummy",
+      "PYTHONUNBUFFERED": "True",
+      "UV_LINK_MODE": "copy"
+  },
+  "postCreateCommand": "uv sync --frozen",
+  "remoteUser": "vscode"
+}
